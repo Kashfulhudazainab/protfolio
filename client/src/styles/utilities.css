@@ -1,0 +1,55 @@
+/* =========================
+   BACKGROUND UTILITIES
+   ========================= */
+.bg-main {
+  background-color: var(--bg-main);
+}
+
+.bg-section {
+  background-color: var(--bg-section);
+}
+
+.bg-card {
+  background-color: var(--bg-card);
+}
+
+/* =========================
+   TEXT UTILITIES
+   ========================= */
+.text-heading {
+  color: var(--text-heading);
+}
+
+.text-body {
+  color: var(--text-body);
+}
+
+.text-muted {
+  color: var(--text-muted);
+}
+
+/* =========================
+   BUTTON UTILITIES
+   ========================= */
+.btn-primary {
+  background-color: var(--btn-bg);
+  color: var(--btn-text);
+}
+
+.btn-primary:hover {
+  background-color: var(--btn-hover);
+}
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-scroll {
+  display: flex;
+  width: max-content;
+  animation: scroll 30s linear infinite;
+}
+
+.animate-scroll:hover {
+  animation-play-state: paused;
+}

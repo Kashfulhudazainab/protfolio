@@ -1,0 +1,46 @@
+/* =========================
+   COLOR THEME VARIABLES
+   ========================= */
+
+/* 🌞 LIGHT MODE */
+:root {
+  /* Base Colors */
+  --color-primary: #0F2854;     /* Dark Navy */
+  --color-secondary: #1F4E8C;   /* Deep Blue */
+  --color-accent: #4F8CC9;      /* Medium Blue */
+  --color-light: #C8EFF9;       /* Light Sky */
+  --color-white: #FFFFFF;
+
+  /* Backgrounds */
+  --bg-main: #FFFFFF;
+  --bg-section: #C8EFF9;
+  --bg-card: #FFFFFF;
+
+  /* Text */
+  --text-heading: #0F2854;
+  --text-body: #1F4E8C;
+  --text-muted: #4F8CC9;
+
+  /* Buttons */
+  --btn-bg: #0F2854;
+  --btn-text: #FFFFFF;
+  --btn-hover: #1F4E8C;
+}
+
+/* 🌙 DARK MODE */
+.dark {
+  /* Backgrounds */
+  --bg-main: #0F2854;
+  --bg-section: #1F4E8C;
+  --bg-card: #1F4E8C;
+
+  /* Text */
+  --text-heading: #FFFFFF;
+  --text-body: #C8EFF9;
+  --text-muted: #4F8CC9;
+
+  /* Buttons */
+  --btn-bg: #4F8CC9;
+  --btn-text: #0F2854;
+  --btn-hover: #C8EFF9;
+}
