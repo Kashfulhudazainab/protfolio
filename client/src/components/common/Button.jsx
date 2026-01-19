@@ -9,7 +9,7 @@ const SharedButton = ({ role }) => {
       bg-[var(--btn-bg)] text-[var(--btn-text)] hover:bg-[var(--btn-hover)]
     ">
       {isAdmin ? "EDIT MODE" : "HIRE ME"}
-      <span className="text-lg font-light">{isAdmin ? "⚙️" : "↗"}</span>
+      <span className="text-md font-light">{isAdmin ? "⚙️" : "↗"}</span>
     </button>
   );
 };

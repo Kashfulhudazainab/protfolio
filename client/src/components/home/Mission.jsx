@@ -16,7 +16,7 @@ const Mission = () => {
           {/* Main Statement with highlight effect */}
           <div className="relative">
             <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold leading-[1.2] text-[var(--text-heading)] uppercase tracking-tight">
-              I am a passionate web developer with a <span className="text-[var(--text-muted)]">strong focus on creating clean, modern, and user-friendly websites.</span>
+              I am Kashful huda, a passionate web developer with a <span className="text-[var(--text-muted)]">strong focus on creating clean, modern, and user-friendly websites.</span>
             </h2>
           </div>
 
