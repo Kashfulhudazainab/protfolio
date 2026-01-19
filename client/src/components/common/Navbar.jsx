@@ -55,7 +55,7 @@ const Navbar = () => {
           {isDark ? '☀️' : '🌙'}
         </button>
         
-        <Button>HIRE ME</Button>
+        <Button><Link to="/cotact">HIRE ME</Link></Button>
       </div>
     </nav>
   );

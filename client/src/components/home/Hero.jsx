@@ -1,6 +1,7 @@
 import React from 'react';
 import SharedButton from '../common/Button';
 import heroImage from '../../assets/images/hero.png'; 
+import { Link } from 'react-router-dom';
 
 const Hero = ({ role }) => {
   return (
@@ -40,7 +41,7 @@ const Hero = ({ role }) => {
             <SharedButton role={role} />
             
             <button className="flex items-center gap-2 font-bold text-[var(--text-heading)] hover:text-[var(--text-muted)] transition-colors group text-sm md:text-base">
-              VIEW PROJECTS 
+              <Link path to="/projects">VIEW PROJECTS </Link>
               <span className="text-xl transition-transform group-hover:translate-x-1">›</span>
             </button>
           </div>

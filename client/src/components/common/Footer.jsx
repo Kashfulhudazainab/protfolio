@@ -20,12 +20,12 @@ const Footer = () => {
               GREAT TOGETHER.
             </h2>
             <div className="flex items-center gap-4">
-               <a 
-                href="mailto:yourname@email.com" 
+               <Link 
+                path to="/contact" 
                 className="bg-[var(--text-heading)] text-[var(--bg-main)] px-8 py-4 rounded-full font-bold uppercase text-sm hover:scale-105 transition-transform"
               >
                 Start a Conversation
-              </a>
+              </Link>
             </div>
           </div>
 

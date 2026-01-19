@@ -26,7 +26,7 @@ const Projects = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {homeFeatured.map((item) => (
             <Link 
-              to={`/projects#${item.id}`} 
+              to="/projects" 
               key={item.id}
               className="group relative bg-[var(--bg-card)] p-10 rounded-[2rem] border border-[var(--text-muted)] border-opacity-10 hover:border-[var(--color-accent)] hover:border-opacity-30 transition-all duration-500 flex flex-col min-h-[400px]"
             >

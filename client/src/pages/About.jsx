@@ -4,7 +4,7 @@ import Footer from '../components/common/Footer';
 import IntroHeader from '../components/about/IntroHeader';
 import BioSection from '../components/about/BioSection';
 import Recognition from '../components/about/Recognition';
-import CTA from '../components/about/CTA';
+import TestimonialForm from '../components/about/CTA';
 
 const About = () => {
   return (
@@ -12,7 +12,7 @@ const About = () => {
       <IntroHeader/>
       <BioSection/>
       <Recognition/>
-      <CTA/>
+      <TestimonialForm/>
     </div>
   );
 };
