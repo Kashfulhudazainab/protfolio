@@ -1,10 +1,10 @@
 import React from 'react';
 import { homeFeatured } from '../../data/homeProjects';
-import { Link } from 'react-router-dom'; // Assuming you use react-router
+import { Link } from 'react-router-dom';
 
 const Projects = () => {
   return (
-    <section className="py-24 px-8 md:px-16 lg:px-24 bg-[var(--bg-main)]">
+    <section className="py-24 px-6 md:px-12 lg:px-24 bg-[var(--bg-main)]">
       <div className="container mx-auto">
         
         {/* Section Header */}
@@ -17,22 +17,22 @@ const Projects = () => {
               WORK <span className="text-[var(--text-muted)]">SNAPSHOT</span>
             </h2>
           </div>
-          <Link to="/projects" className="text-sm font-bold text-[var(--text-heading)] border-b-2 border-[var(--text-muted)] hover:text-[var(--text-muted)] transition-all pb-1">
+          <Link to="/projects" className="text-sm font-bold text-[var(--text-heading)] border-b-2 border-[var(--text-muted)] hover:text-[var(--text-muted)] transition-all pb-1 w-fit">
             EXPLORE ALL PROJECTS
           </Link>
         </div>
 
-        {/* The Three Category Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {/* The Category Cards - Improved Responsive Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {homeFeatured.map((item) => (
             <Link 
               to="/projects" 
               key={item.id}
-              className="group relative bg-[var(--bg-card)] p-10 rounded-[2rem] border border-[var(--text-muted)] border-opacity-10 hover:border-[var(--color-accent)] hover:border-opacity-30 transition-all duration-500 flex flex-col min-h-[400px]"
+              className="group relative bg-[var(--bg-card)] p-8 md:p-10 rounded-[2rem] border border-[var(--text-muted)] border-opacity-10 hover:border-[var(--color-accent)] hover:border-opacity-30 transition-all duration-500 flex flex-col min-h-[420px] overflow-hidden"
             >
-              {/* Top Row: Category & Count */}
+              {/* Top Row */}
               <div className="flex justify-between items-start mb-8">
-                <span className="text-[10px] font-black uppercase tracking-[0.2em] text-[var(--text-muted)]">
+                <span className="text-[9px] md:text-[10px] font-black uppercase tracking-[0.2em] text-[var(--text-muted)]">
                   {item.category}
                 </span>
                 <span className="text-[var(--text-muted)] opacity-40 font-mono text-xs">
@@ -40,9 +40,10 @@ const Projects = () => {
                 </span>
               </div>
 
-              {/* Middle: Title & Icons */}
+              {/* Middle Content */}
               <div className="flex-grow">
-                <h3 className="text-3xl font-bold text-[var(--text-heading)] uppercase tracking-tighter mb-4 leading-tight">
+                {/* Responsive text sizes to prevent overflow */}
+                <h3 className="text-2xl md:text-xl lg:text-3xl font-bold text-[var(--text-heading)] uppercase tracking-tighter mb-4 leading-tight break-words">
                   {item.title}
                 </h3>
                 <div className="flex gap-4 mb-6">
@@ -55,12 +56,12 @@ const Projects = () => {
                 </p>
               </div>
 
-              {/* Bottom: Visual Indicator */}
+              {/* Bottom Visual Indicator */}
               <div className="mt-8 flex items-center justify-between">
-                <div className="w-12 h-12 rounded-full border border-[var(--text-muted)] border-opacity-20 flex items-center justify-center group-hover:bg-[var(--text-heading)] transition-all duration-500">
+                <div className="w-10 h-10 md:w-12 md:h-12 rounded-full border border-[var(--text-muted)] border-opacity-20 flex items-center justify-center group-hover:bg-[var(--text-heading)] transition-all duration-500">
                   <span className="text-[var(--text-heading)] group-hover:text-[var(--bg-main)] transition-colors text-xl">→</span>
                 </div>
-                <span className="text-[10px] font-bold text-[var(--text-muted)] opacity-0 group-hover:opacity-100 transition-opacity uppercase tracking-widest">
+                <span className="text-[9px] font-bold text-[var(--text-muted)] opacity-0 group-hover:opacity-100 transition-opacity uppercase tracking-widest">
                   View Collection
                 </span>
               </div>
