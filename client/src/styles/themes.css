@@ -27,10 +27,10 @@
   --btn-hover: #1F4E8C;
 }
 
-/* 🌙 DARK MODE */
+/* 🌙 DARK MODE #0F2854*/
 .dark {
   /* Backgrounds */
-  --bg-main: #0F2854;
+  --bg-main: #3964ac;
   --bg-section: #1F4E8C;
   --bg-card: #1F4E8C;
 
@@ -41,6 +41,6 @@
 
   /* Buttons */
   --btn-bg: #4F8CC9;
-  --btn-text: #0F2854;
+  --btn-text: #2a5db5;
   --btn-hover: #C8EFF9;
 }
