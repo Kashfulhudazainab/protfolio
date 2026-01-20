@@ -14,7 +14,7 @@ const Footer = () => {
           
           {/* Left: Big CTA */}
           <div className="flex flex-col gap-8">
-            <h2 className="text-5xl md:text-7xl font-black text-[var(--text-heading)] uppercase tracking-tighter leading-[0.9]">
+            <h2 className="text-4xl md:text-5xl font-black text-[var(--text-heading)] uppercase tracking-tighter leading-[0.9]">
               LET'S BUILD <br />
               <span className="text-[var(--text-muted)]">SOMETHING</span> <br />
               GREAT TOGETHER.

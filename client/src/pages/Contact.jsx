@@ -9,7 +9,7 @@ const Contact = () => {
       <div className="container mx-auto">
         {/* Page Title */}
         <div className="mb-24">
-          <h1 className="text-7xl md:text-9xl font-black text-[var(--text-heading)] uppercase tracking-tighter leading-none">
+          <h1 className="text-5xl md:text-5xl font-black text-[var(--text-heading)] uppercase tracking-tighter leading-none">
             GET IN <span className="text-[var(--text-muted)]">TOUCH.</span>
           </h1>
         </div>

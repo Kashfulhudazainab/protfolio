@@ -33,7 +33,7 @@ const Projects = () => {
   if (loading) return (
     <div className="bg-[var(--bg-main)] min-h-screen flex items-center justify-center">
       <p className="text-[10px] font-black uppercase tracking-[0.4em] text-[var(--text-muted)] animate-pulse">
-        Fetching Database...
+        loading...
       </p>
     </div>
   );
@@ -45,7 +45,7 @@ const Projects = () => {
         {/* Header */}
         <div className="mb-16">
           <p className="text-[var(--text-muted)] uppercase tracking-[0.4em] font-bold text-[10px] mb-4">Portfolio</p>
-          <h1 className="text-7xl md:text-9xl font-black text-[var(--text-heading)] uppercase tracking-tighter leading-none mb-12">
+          <h1 className="text-5xl md:text-7xl font-black text-[var(--text-heading)] uppercase tracking-tighter leading-none mb-12">
             Selected <br /> <span className="text-[var(--text-muted)]">Works.</span>
           </h1>
 

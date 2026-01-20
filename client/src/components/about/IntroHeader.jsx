@@ -19,7 +19,7 @@ const IntroHeader = () => {
               <span className="w-12 h-[1px] bg-[var(--text-muted)] opacity-30"></span>
               The Story So Far
             </p>
-            <h1 className="text-6xl md:text-8xl lg:text-9xl font-black text-[var(--text-heading)] uppercase tracking-tighter leading-[0.85]">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-black text-[var(--text-heading)] uppercase tracking-tighter leading-[0.85]">
               Turning <span className="text-[var(--text-muted)]">Logic</span> <br />
               Into Experience.
             </h1>
