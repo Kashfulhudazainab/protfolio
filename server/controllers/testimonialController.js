@@ -1,27 +1,24 @@
 const Testimonial = require('../models/Testimonial');
 
-// Get only approved testimonials
+// GET only approved testimonials for the frontend
 const getApprovedTestimonials = async (req, res) => {
   try {
-    const testimonials = await Testimonial.find({ isApproved: true });
-    res.status(200).json(testimonials);
-  } catch (error) {
-    res.status(500).json({ message: "Server Error" });
+    // Only find documents where isApproved is true
+    const approvedData = await Testimonial.find({ isApproved: true }).sort({ date: -1 });
+    res.status(200).json(approvedData);
+  } catch (err) {
+    res.status(500).json({ message: "Error fetching data" });
   }
 };
 
-// Submit a testimonial
+// POST a new testimonial (defaults to isApproved: false)
 const submitTestimonial = async (req, res) => {
   try {
-    const testimonialData = { ...req.body, isApproved: false };
-    const newTestimonial = await Testimonial.create(testimonialData);
-    res.status(201).json(newTestimonial);
-  } catch (error) {
-    res.status(400).json({ message: "Submission failed" });
+    const newTestimonial = await Testimonial.create(req.body);
+    res.status(201).json({ message: "Submitted for review!", data: newTestimonial });
+  } catch (err) {
+    res.status(400).json({ message: "Error saving feedback" });
   }
 };
 
-module.exports = {
-  getApprovedTestimonials,
-  submitTestimonial
-};
+module.exports = { getApprovedTestimonials, submitTestimonial };
