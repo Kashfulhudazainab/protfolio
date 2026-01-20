@@ -1,15 +1,42 @@
-import React, { useState } from 'react';
-import { projectsData } from '../data/projectsData';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 import ProjectCard from '../components/projects/ProjectCard';
 
 const Projects = () => {
+  const [projects, setProjects] = useState([]); // Dynamic data from MongoDB
   const [filter, setFilter] = useState('All');
+  const [loading, setLoading] = useState(true);
 
+  const API_URL = import.meta.env.VITE_API_BASE_URL;
   const categories = ['All', 'MERN Stack', 'Frontend', 'Mini JS'];
 
+  // 1. Fetch data from your working API
+  useEffect(() => {
+    const getProjects = async () => {
+      try {
+        const res = await axios.get(`${API_URL}/projects`);
+        setProjects(res.data);
+        setLoading(false);
+      } catch (err) {
+        console.error("Failed to fetch projects:", err);
+        setLoading(false);
+      }
+    };
+    getProjects();
+  }, [API_URL]);
+
+  // 2. Use 'projects' (from state) instead of 'projectsData' (from file)
   const filteredProjects = filter === 'All' 
-    ? projectsData 
-    : projectsData.filter(p => p.category === filter);
+    ? projects 
+    : projects.filter(p => p.category === filter);
+
+  if (loading) return (
+    <div className="bg-[var(--bg-main)] min-h-screen flex items-center justify-center">
+      <p className="text-[10px] font-black uppercase tracking-[0.4em] text-[var(--text-muted)] animate-pulse">
+        Fetching Database...
+      </p>
+    </div>
+  );
 
   return (
     <div className="bg-[var(--bg-main)] min-h-screen pt-32 pb-24 px-8 md:px-16 lg:px-24">
@@ -40,11 +67,16 @@ const Projects = () => {
           </div>
         </div>
 
-        {/* Grid */}
+        {/* Dynamic Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredProjects.map((project) => (
-            <ProjectCard key={project.id} project={project} />
-          ))}
+          {filteredProjects.length > 0 ? (
+            filteredProjects.map((project) => (
+              // Using MongoDB _id for the key
+              <ProjectCard key={project._id} project={project} />
+            ))
+          ) : (
+            <p className="text-[10px] uppercase tracking-widest opacity-30">No projects found in this category.</p>
+          )}
         </div>
       </div>
     </div>
